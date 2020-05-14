@@ -1,0 +1,60 @@
+enum UsuarioStatus {
+    ATIVO
+    INATIVO
+    BLOQUEADO
+}
+
+enum Perfil {
+    MASTER
+    ADMINISTRADOR
+    DEVEDOR
+    CREDOR
+    PROCURADOR
+    COMUM
+}
+
+type Usuario {
+    id: ID!
+    nome: String!
+    email: String!
+    senha: String!
+    perfil: Perfil!
+    status: UsuarioStatus
+    token: String
+    createdAt: String!
+    updatedAt: String
+}
+
+input RegistrarUsuarioInput {
+    nome: String!
+    email: String!
+    senha: String!
+}
+
+input LoginUsuarioInput {
+    email: String!
+    senha: String!
+}
+
+input AdicionarUsuarioInput {
+    nome: String!
+    email: String!
+    senha: String!
+    perfil: Perfil!
+}
+
+input EditarUsuarioInput {
+    nome: String
+    email: String
+    senha: String
+}
+
+input LoginInput {
+    nome: String!
+    senha: String!
+}
+
+type UsuarioPayload {
+    token: String!
+    usuario: Usuario!
+}

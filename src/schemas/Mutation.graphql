@@ -1,0 +1,7 @@
+type Mutation {
+    #USUARIO
+    registrarUsuario(dados: RegistrarUsuarioInput!): Usuario!
+    adicionarUsuario(dados: AdicionarUsuarioInput!): Usuario!
+    editarUsuario(id: ID!, dados: EditarUsuarioInput!): Usuario!
+    excluirUsuario(id: ID!): Usuario!
+}

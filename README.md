@@ -23,4 +23,4 @@ Quando adiciono console.log(req.headers) no src/config/context.js , retorna isso
 console.log(auth) sempre retorna undefined
 
 Não aparece authorization nos meus headers, não sei o que fazer.
-Acredito que possa ser alguma configuração do ApolloServer, mas estou emperrado.
+Acredito que possa ser alguma configuração do ApolloServer, mas não estou conseguindo.
